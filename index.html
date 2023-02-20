@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="Description" content="Put your description here.">
+  <base href="/">
+
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-color: #ededed;
+    }
+  </style>
+  <title>george-card</title>
+</head>
+
+<body>
+  <div class="buttons">
+    <button data-toggle-btn>Toggle Description</button>
+      <button id="deletelastcard">Delete</button>
+      <button class="duplicate">Duplicate Card</button>
+      <button class="modifytitle">Change Name</button>
+    <div>
+        <div id="app">
+    <george-card></george-card>
+    </div>
+    <script type="module" src="./src/george-card.js"></script>
+    <script>
+  
+
+//toggle
+document.querySelector('button[data-toggle-btn]').addEventListener('click', (e) => {
+  const details = document.querySelector('george-card').shadowRoot.querySelector('details')
+  
+  if (details.getAttribute('open')) {
+    details.removeAttribute('open');
+  }
+  else{
+  details.setAttribute('open','open');
+  }
+});
+
+//duplicate
+document.querySelector('.duplicate').addEventListener('click', function(e) {
+ const itemToClone = document.querySelector('george-card').cloneNode();
+  document.querySelector('#app').appendChild(itemToClone);
+  
+});
+
+//delete last
+document.querySelector('#deletelastcard').addEventListener('click', function(e) {
+document.querySelector('#app :last-child').remove();
+    } 
+);
+
+//modify
+document.querySelector('.modifytitle').addEventListener('click', function(e) {
+  let name = prompt("Name George...");
+  if (name) {
+    document.querySelector('george-card').shadowRoot.querySelector('.wrapper h3').innerText = name;
+  }
+});
+
+    </script>
+  </body>
+
+</html>
