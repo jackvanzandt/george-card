@@ -1,7 +1,5 @@
 import { LitElement, html, css } from 'lit';
 
-const george = new URL('../assets/george.jpg', import.meta.url).href;
-
 export class GeorgeCard extends LitElement {
   static properties = {
     version: {},
