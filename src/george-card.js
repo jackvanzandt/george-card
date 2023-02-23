@@ -1,16 +1,45 @@
 import { LitElement, html, css } from 'lit';
 
+import "@lrnwebcomponents/meme-maker/meme-maker.js";
+
+
 export class GeorgeCard extends LitElement {
-  static properties = {
-    version: {},
-  };
+  static get properties() {
+  return{
+  accentColor: {
+    type: String,
+    reflect: true,
+    attribute: 'accent-color'
+  }
+  }
+  }
+  
 
 static get styles(){
   return css`
+
+:host([accent-color="yellow"]) .wrapper {
+  background-color: yellow;
+  color: black;
+}
+:host([accent-color="red"]) .wrapper {
+  background-color: red;
+  color: black;
+}
+:host([accent-color="green"]) .wrapper {
+  background-color: green;
+  color: black;
+}
+:host([accent-color="blue"]) .wrapper {
+  background-color: blue;
+  color: black;
+}
+
+
 .wrapper {
   width: 474px;
   border: 2px solid black;
-  display: insline-flex;
+  display: inline-flex;
   background-color: yellow;
   
 }
@@ -69,6 +98,7 @@ button{
   constructor() {
     super();
     this.version = 'STARTING';
+    this.accentColor = null;
   }
 
   render() {

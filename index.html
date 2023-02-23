@@ -25,6 +25,7 @@
       <button id="deletelastcard">Delete</button>
       <button class="duplicate">Duplicate Card</button>
       <button class="modifytitle">Change Name</button>
+      <button class="bg-color">Change Card Color</button>
     <div>
         <div id="app">
     <george-card></george-card>
@@ -66,6 +67,13 @@ document.querySelector('.modifytitle').addEventListener('click', function(e) {
   }
 });
 
+const changecolor = document.querySelector('.bg-color');
+  changecolor.addEventListener("click", function (e) {
+    const colors = ["yellow", "red", "green", "blue"];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    document.querySelector("george-card").accentColor = randomColor;
+
+  });
     </script>
   </body>
 
