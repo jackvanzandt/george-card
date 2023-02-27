@@ -69,12 +69,6 @@ details{
   padding: 10px;
 }
 
-button{
-  display: inline-block;
-  padding: 10px;
-  background-color: red;
-}
-
 .buttons button:hover, a:hover, button:focus {
   opacity: 0.7;
 }
@@ -108,7 +102,7 @@ button{
   <img class="image" src="https://tse1.mm.bing.net/th?id=OIP.zPK_w1eJ4HJOCkaFzQrS4wHaED&pid=Api&P=0"/>
   <div class="header">
     <h3>George Pickens</h3>
-    <h4> Wide Receiver </h4>
+    <slot>Wide Receiver</slot>
   </div>
   <details class="details">
     <summary>Rookie Stats</summary>
