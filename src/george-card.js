@@ -102,17 +102,15 @@ details{
   <img class="image" src="https://tse1.mm.bing.net/th?id=OIP.zPK_w1eJ4HJOCkaFzQrS4wHaED&pid=Api&P=0"/>
   <div class="header">
     <h3>George Pickens</h3>
-    <slot>Wide Receiver</slot>
+    <h4>Wide Receiver</h4>
   </div>
   <details class="details">
     <summary>Rookie Stats</summary>
-    <div>
-      <ul>
-      <li>Rookie for the Pittsburgh Steelers in 2022 </li>
-        <li> 84 targets 801 yards 9.5 yards per target 4 TD </li>
-      </ul>
-    </div>
+    <slot></slot>
   </details>
+  <meme-maker image-url='https://tse1.mm.bing.net/th?id=OIP.zPK_w1eJ4HJOCkaFzQrS4wHaED&pid=Api&P=0' top-text='NFL' bottom-text='Youngboy'>
+
+  </meme-maker>
 </div>
 </div>
     
