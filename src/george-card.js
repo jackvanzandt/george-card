@@ -99,8 +99,7 @@ details{
     return html`
 <div class="wrapper">
   <div class="container">
-  <meme-maker class="image" image-url="https://tse1.mm.bing.net/th?id=OIP.zPK_w1eJ4HJOCkaFzQrS4wHaED&pid=Api&P=0" top-text='NFL' bottom-text='Youngboy'/>
-  </meme-maker>
+  <img class="image" src="https://tse1.mm.bing.net/th?id=OIP.zPK_w1eJ4HJOCkaFzQrS4wHaED&pid=Api&P=0"/>
   <div class="header">
     <h3>George Pickens</h3>
     <h4>Wide Receiver</h4>
