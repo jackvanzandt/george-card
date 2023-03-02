@@ -35,19 +35,13 @@
       <button class="bg-color">Change Card Color</button>
   </div>
   <div id="app">
-    <george-card>
-      <div>
-        <ul>
-          <li>Rookie for the Pittsburgh Steelers in 2022 </li>
-          <li> 84 targets 801 yards 9.5 yards per target 4 TD </li>
-        </ul>
-      </div>
+    <george-card player-name="George Pickens" position="Wide Receiver" image-url="https://tse1.mm.bing.net/th?id=OIP.zPK_w1eJ4HJOCkaFzQrS4wHaED&pid=Api&P=0" stat-one="Rookie for the Pittsburgh Steelers in 2022" stat-two="84 targets 801 yards 9.5 yards per target 4 TD" top-text="NFL" bottom-text="Youngboy">
     </george-card>
     </div>
     <script type="module" src="./src/george-card.js"></script>
-    <script>
-  
 
+
+    <script>
 //toggle
 document.querySelector('button[data-toggle-btn]').addEventListener('click', (e) => {
   const details = document.querySelector('george-card').shadowRoot.querySelector('details')

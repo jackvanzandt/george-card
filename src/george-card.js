@@ -2,7 +2,6 @@ import { LitElement, html, css } from "lit";
 
 import "@lrnwebcomponents/meme-maker/meme-maker.js";
 
-//const don = ("https://tse1.mm.bing.net/th?id=OIP.zPK_w1eJ4HJOCkaFzQrS4wHaED&pid=Api&P=0");
 
 export class GeorgeCard extends LitElement {
   static get properties() {
@@ -12,6 +11,40 @@ export class GeorgeCard extends LitElement {
         reflect: true,
         attribute: "accent-color",
       },
+      name: {
+      type: String,
+      reflect: true,
+      attribute: "player-name",
+      },
+      position: {
+        type: String,
+        reflect: true,
+      },
+      imageUrl: {
+        type: String,
+        reflect: true,
+        attribute: "image-url",
+      },
+      topText: {
+        type: String,
+        reflect: true,
+        attribute: "top-text",
+      },
+      bottomText: {
+        type: String,
+        reflect: true,
+        attribute: "bottom-text",
+      },
+      statone: {
+        type: String,
+        reflect: true,
+        attribute: "stat-one",
+      },
+      stattwo: {
+        type: String,
+        reflect: true,
+        attribute: "stat-two",
+      }
     };
   }
 
@@ -53,6 +86,7 @@ export class GeorgeCard extends LitElement {
       .header h3,
       .header h4 {
         margin: 10px;
+        font-size: 20px;
       }
 
       .details summary {
@@ -71,18 +105,6 @@ export class GeorgeCard extends LitElement {
         opacity: 0.7;
       }
 
-      /* @media only screen and (max-width: 325px){
-  .wrapper{
-    font-size: 10px;
-    font-weight: normal;
-  }
-  details {
-    display: none;
-  }
-  .wrapper header h3, h4 {
-    font-size: 12px;
-  }
-} */
     `;
   }
 
@@ -90,22 +112,29 @@ export class GeorgeCard extends LitElement {
     super();
     this.version = "STARTING";
     this.accentColor = null;
+    this.position = "";
+    this.imageUrl = "";
+    this.topText = "";
+    this.bottomText = "";
   }
 
   render() {
     return html`
 <div class="wrapper">
-  <meme-maker image-url="https://tse1.mm.bing.net/th?id=OIP.zPK_w1eJ4HJOCkaFzQrS4wHaED&pid=Api&P=0" top-text="NFL" bottom-text="Youngboy">
+  <meme-maker image-url="${this.imageUrl}" 
+  top-text="${this.topText}" 
+  bottom-text="${this.bottomText}">
 
   </meme-maker>
 
   <div class="header">
-    <h3>George Pickens</h3>
-    <h4>Wide Receiver</h4>
+    <h3>${this.name}</h3>
+    <h4>${this.position}</h4>
   </div>
   <details class="details">
-    <summary>Rookie Stats</summary>
-    <slot></slot>
+    <summary>Stats</summary>
+    <li>${this.statone}</li>
+    <li>${this.stattwo}</li>
   </details>
 </div>
     
