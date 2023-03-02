@@ -95,7 +95,9 @@ export class GeorgeCard extends LitElement {
   render() {
     return html`
 <div class="wrapper">
-  <meme-maker image-url="https://tse1.mm.bing.net/th?id=OIP.zPK_w1eJ4HJOCkaFzQrS4wHaED&pid=Api&P=0" top-text="NFL" bottom-text="Youngboy"/></meme-maker>
+  <meme-maker image-url="https://tse1.mm.bing.net/th?id=OIP.zPK_w1eJ4HJOCkaFzQrS4wHaED&pid=Api&P=0" top-text="NFL" bottom-text="Youngboy">
+
+  </meme-maker>
 
   <div class="header">
     <h3>George Pickens</h3>
@@ -104,7 +106,6 @@ export class GeorgeCard extends LitElement {
   <details class="details">
     <summary>Rookie Stats</summary>
     <slot></slot>
-  
   </details>
 </div>
     
